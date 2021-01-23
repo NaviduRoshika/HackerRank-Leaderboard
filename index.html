@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>HackMoral - 3.0 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./data.js"></script>
+</head>
+
+<body>
+
+    <div class="se-pre-con"></div>
+
+
+    <!-- loading files -->
+
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <style>
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+			if it's not present, don't show loader */
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/Preloader_2.gif) center no-repeat #fff;
+        }
+    </style>
+ 
+        <div id="fh5co-couple">
+            <div class="containerTable">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <div class="card text-centerx">
+                            <div class="card-header" style="font-size: 150%; font-weight: bold;">
+                                Overall Result
+                            </div>
+                            <div class="card-body">
+                                <table class="table" id="personDataTable" style="text-align: center;">
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Place</th>
+                                </table>
+                            </div>
+                            <div class="card-footer text-muted">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="fh5co-footer" role="contentinfo">
+            <div class="container">
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <small class="block"> Copyright &copy; 2020 | Crafted by <a
+                                    href="http://intecs.itfac.mrt.ac.lk/" style="color: rgb(42, 0, 97);"
+                                    target="_blank"></a></small>
+
+                        </p>
+
+                        <p>
+                            <ul class="fh5co-social-icons">
+                                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- countTo -->
+    <script src="js/jquery.countTo.js"></script>
+
+    <!-- Stellar -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+
+    <script src="js/simplyCountdown.js"></script>
+    <script src="js/main.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="js/menu.js"></script>
+   
+    <script>
+        //paste this code under head tag or in a seperate js file.
+        // Wait for window load
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5ee3b1244a7c6258179a7b40/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+        
+    </script>
+
+    <script>
+        var arr = [];
+        var arrx = [];
+        var x = [];
+        var y = [];
+        var names = [];
+        var z = [];
+        function myFunction(arrx) {  
+            var out = "";
+            var outName = "";
+            var i;
+                //calling the hackerank API
+            $.ajax({
+            url: 'https://cors-anywhere.herokuapp.com/https://www.hackerrank.com/rest/contests/hackmoral-playground/leaderboard?type=contest&offset=0&limit=300&level=1&elo_version=true',
+            type: "get",
+            dataType: "json",
+            success: function (results) {
+                results.models.map((com) => {
+                    arr.push(com)    //push the data to the arr
+                });
+
+            }
+            }).then(() => {
+            z = drawTable(arr);      //get the hackerrank user names from the arr(hacker rank api)
+            //    console.log(z)
+               for (i = 0; i < arrx.length; i++) {
+                out = arrx[i].H_username;
+                outName = arrx[i].Name;
+                y.push(out);
+                names.push(outName);  
+            } 
+            var index;
+            var j;
+            var count = 1;
+            for (index = 0; index < z.length; index++) {
+                for(j=0;j<y.length;j++){                     //check whether the participant is registered or not
+                    if(z[index] == y[j]){
+                        // console.log(y[j]);
+                        drawRow(names[j], count++);      // pass the data to write the table
+                    }
+
+                }
+                
+            }
+        });
+
+         function drawTable(data) {
+           var p = "";
+            
+            var j = 0;
+            var filteredArray = data.filter((data) => JSON.stringify(data['hacker'])).map((val) => {
+                p = val.hacker; 
+                x.push(p);
+                
+            });
+            return x;
+            
+        }
+
+        }
+        
+        function drawRow(rowData, place) {      //write the data on the table
+             
+            if(place == 1){
+            var row = $("<tr style='text-align:left;vertical-align:middle' />")
+            $("#personDataTable").append(row);
+            row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/05/medal-2163347_960_720.png" style="width:40px"/></td>`));
+            row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + place + "</td>"));
+            }else if(place ==2) {
+            var row = $("<tr style='text-align:left;vertical-align:middle' />")
+            $("#personDataTable").append(row);
+            row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/05/medal-2163349_960_720.png" style="width:40px"/></td>`));
+            row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + place + "</td>"));
+            }
+            else if(place ==3) {
+            var row = $("<tr style='text-align:left;vertical-align:middle' />")
+            $("#personDataTable").append(row);
+            row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/06/medal-2163351_960_720.png" style="width:40px"/></td>`));
+            row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + place + "</td>"));
+            }
+            else if(place <= 20) {
+            var row = $("<tr style='text-align:left;vertical-align:middle' />")
+            $("#personDataTable").append(row);
+            row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://www.wpclipart.com/recreation/trophy/simple_trophy/trophy_blue.png" style="width:40px"/></td>`));
+            row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + place + "</td>"));
+            
+            }
+            else{
+             var row = $("<tr style='text-align:left;vertical-align:middle' />")
+            $("#personDataTable").append(row);
+            row.append($("<td>" +  + "</td>"));
+            row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + place + "</td>"));
+            }
+        }
+    </script>
+    <!--End of Tawk.to Script-->  <!--  data file     -->
+    <script src="./data.js"></script>  
+</body>
+
+</html>
