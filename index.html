@@ -83,6 +83,7 @@
                                 <table class="table" id="personDataTable" style="text-align: center;">
                                     <th></th>
                                     <th>Name</th>
+                                    <th>Score</th>
                                     <th>Place</th>
                                 </table>
                             </div>
@@ -189,6 +190,8 @@
         var y = [];
         var names = [];
         var z = [];
+        var s = [];
+        var userScore = [];
         function myFunction(arrx) {  
             var out = "";
             var outName = "";
@@ -205,22 +208,23 @@
 
             }
             }).then(() => {
-            z = drawTable(arr);      //get the hackerrank user names from the arr(hacker rank api)
+            z = drawTable(arr);
+            s = scoreTable(arr);       //get the hackerrank user names from the arr(hacker rank api)
             //    console.log(z)
                for (i = 0; i < arrx.length; i++) {
                 out = arrx[i].H_username;
                 outName = arrx[i].Name;
                 y.push(out);
                 names.push(outName);  
-            } 
+            }
             var index;
             var j;
-            var count = 1;
+            var count = 0;
             for (index = 0; index < z.length; index++) {
                 for(j=0;j<y.length;j++){                     //check whether the participant is registered or not
                     if(z[index] == y[j]){
                         // console.log(y[j]);
-                        drawRow(names[j], count++);      // pass the data to write the table
+                        drawRow(names[j],s[index],++count);      // pass the data to write the table
                     }
 
                 }
@@ -230,10 +234,11 @@
 
          function drawTable(data) {
            var p = "";
+           var score =0;
             
-            var j = 0;
             var filteredArray = data.filter((data) => JSON.stringify(data['hacker'])).map((val) => {
-                p = val.hacker; 
+                p = val.hacker;
+                score = val.score; 
                 x.push(p);
                 
             });
@@ -241,21 +246,35 @@
             
         }
 
+        function scoreTable(data) {
+           var score =0;
+          
+            var filteredArray = data.filter((data) => JSON.stringify(data['hacker'])).map((val) => {
+                score = val.score; 
+                userScore.push(score);
+                
+            });
+            return userScore;
+            
+        }
+
         }
         
-        function drawRow(rowData, place) {      //write the data on the table
+        function drawRow(rowData, scores,place) {      //write the data on the table
              
             if(place == 1){
             var row = $("<tr style='text-align:left;vertical-align:middle' />")
             $("#personDataTable").append(row);
             row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/05/medal-2163347_960_720.png" style="width:40px"/></td>`));
             row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + scores + "</td>"));
             row.append($("<td>" + place + "</td>"));
             }else if(place ==2) {
             var row = $("<tr style='text-align:left;vertical-align:middle' />")
             $("#personDataTable").append(row);
             row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/05/medal-2163349_960_720.png" style="width:40px"/></td>`));
             row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + scores + "</td>"));
             row.append($("<td>" + place + "</td>"));
             }
             else if(place ==3) {
@@ -263,6 +282,7 @@
             $("#personDataTable").append(row);
             row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2017/03/21/21/06/medal-2163351_960_720.png" style="width:40px"/></td>`));
             row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + scores + "</td>"));
             row.append($("<td>" + place + "</td>"));
             }
             else if(place <= 20) {
@@ -270,14 +290,16 @@
             $("#personDataTable").append(row);
             row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://www.wpclipart.com/recreation/trophy/simple_trophy/trophy_blue.png" style="width:40px"/></td>`));
             row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + scores + "</td>"));
             row.append($("<td>" + place + "</td>"));
             
             }
             else{
              var row = $("<tr style='text-align:left;vertical-align:middle' />")
             $("#personDataTable").append(row);
-            row.append($("<td>" +  + "</td>"));
+            row.append($(`<td style='text-align:center;vertical-align:middle'><img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/wreath-304896_960_720.png" style="width:40px"/></td>`));
             row.append($("<td>" + rowData + "</td>"));
+            row.append($("<td>" + scores + "</td>"));
             row.append($("<td>" + place + "</td>"));
             }
         }
